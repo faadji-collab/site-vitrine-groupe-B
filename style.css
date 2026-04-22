@@ -1,0 +1,78 @@
+body {
+    background-color: black; /* Fond sombre pour voir le bouton blanc */
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    /* Une seule colonne par défaut, s'adapte à la largeur */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 1px solid var(--gold); /* Bordure plus fine pour le luxe */
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase; /* Majuscules pour le style premium */
+    letter-spacing: 2px;
+    font-size: 14px;
+    background: transparent;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Transition plus douce */
+}
+
+.btn:hover {
+    background: var(--gold);
+    color: var(--black);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); /* Lueure dorée */
+    transform: scale(1.05); /* Léger grossissement */
+}
+
+/* Utilisation de la variable dorée pour plus de simplicité */
+:root {
+    --gold: #d4af37;
+    --dark-bg: #2c3e50; /* La couleur de ton body dans l'image */
+}
+
+.card {
+    /* Style de base (Ghost) */
+    background-color: transparent; 
+    border: 2px solid var(--gold); /* Bordure dorée dès le départ */
+    color: var(--gold); /* Texte doré */
+    
+    /* Mise en forme */
+    padding: 30px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    
+    /* Transition fluide */
+    transition: all 0.4s ease;
+}
+
+/* L'effet au survol : le fond devient doré */
+.card:hover {
+    background-color: var(--gold); /* Le fond devient doré */
+    color: #1a1a1a; /* Le texte devient noir/sombre pour être lisible */
+    transform: translateY(-5px); /* Petit soulèvement */
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3); /* Lueur dorée */
+}
+
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px)); /* Limite la largeur à 250px */
+    justify-content: center; /* Centre les boutons sur la page */
+}
