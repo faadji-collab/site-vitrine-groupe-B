@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | La Table d'Or</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Police élégante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-gold: #b8860b;
+            --black: #1a1a1a;
+            --white: #e9e5e5;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--black);
+            color: var(--white);
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 2px;
+        }
+
+        /* HEADER */
+        header {
+            background: rgba(9, 9, 9, 0.9);
+            padding: 25px 0;
+            border-bottom: 2px solid var(--gold);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 1.8rem;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--white);
+            margin-left: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(121, 121, 121, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            color: var(--gold);
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: rgb(237, 235, 235);
+        }
+
+        /* SECTION INTRO */
+        .intro {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: var(--gold);
+            font-size: 40px;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: 20px auto;
+            color: #fbf8f8;
+            line-height: 1.8;
+        }
+
+        /* SECTION SPECIALITES */
+        .specialites {
+            background: #efeaea;
+            padding: 80px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #0b0b0b;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+
+        .card h3 {
+            color: var(--gold);
+        }
+
+        /* FOOTER */
+        footer {
+            background: rgb(10, 10, 10);
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #333;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">LA TABLE D'OR</a>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contactez-nous</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Table d'Or</h1>
+            <p>Une expérience gastronomique d’exception</p>
+            <a href="services.html" class="btn">Découvrir la carte</a>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <h2>L’art de la gastronomie</h2>
+        <p>
+            La Table d'Or incarne le raffinement et l’excellence culinaire.
+            Chaque plat est une œuvre, chaque moment une expérience unique.
+        </p>
+    </section>
+
+    <!-- SPECIALITES -->
+    <section class="specialites">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <h3>Cuisine Gastronomique</h3>
+                    <p>Des plats créés avec passion et précision.</p>
+                </div>
+                <div class="card">
+                    <h3>Ambiance Luxe</h3>
+                    <p>Un cadre élégant pour des moments inoubliables.</p>
+                </div>
+                <div class="card">
+                    <h3>Service Premium</h3>
+                    <p>Une équipe dédiée à votre satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>LA TABLE D'OR — EXPÉRIENCE 5 ÉTOILES</p>
+        <p style="font-size: 0.7rem;">Projet Git | Branche : feature/accueil | Membre 2</p>
+    </footer>
+
+</body>
+</html>
