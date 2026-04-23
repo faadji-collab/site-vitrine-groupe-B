@@ -1,19 +1,17 @@
 /* ==========================================================================
-   CHARTE GRAPHIQUE UNIFIÉE : LA TABLE D'OR
+   CHARTE GRAPHIQUE LUXE : LA TABLE D'OR (Mise à jour Finale)
    ========================================================================== */
 
-/* 1. VARIABLES GLOBALES */
+/* 1. VARIABLES DE COULEURS */
 :root {
     --gold: #d4af37;
     --dark-gold: #b8860b;
     --black: #1a1a1a;
     --deep-black: #000000;
     --white: #ffffff;
-    --gray-bg: #f9f9f9;
     --gray-card: #1f1f1f;
-    --text-dark: #333333;
-    --text-muted: #555555;
-    --transition: 0.4s ease;
+    --text-muted: #ccc;
+    --transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* 2. RESET & BASE */
@@ -25,48 +23,34 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
     line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--white);
     overflow-x: hidden;
 }
 
-/* 3. TYPOGRAPHIE GASTRONOMIQUE */
+/* 3. TYPOGRAPHIE */
 h1, h2, h3, .logo {
     font-family: 'Playfair Display', serif;
-    font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title span {
-    display: block;
-    font-size: 0.5em;
-    color: var(--gold);
-    letter-spacing: 5px;
-    margin-bottom: 10px;
-}
-
-/* 4. LAYOUT & CONTAINER */
 .container {
     max-width: 1100px;
     margin: auto;
     padding: 0 20px;
 }
 
-/* 5. HEADER & NAVIGATION */
+/* 4. HEADER (STYLE ACCUEIL - FIXE) */
 header {
-    background: var(--deep-black);
+    background: rgba(0, 0, 0, 0.95);
     padding: 25px 0;
     border-bottom: 2px solid var(--gold);
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
     z-index: 1000;
+    top: 0;
 }
 
 .nav-container {
@@ -85,32 +69,16 @@ nav a {
     color: var(--white);
     margin-left: 25px;
     text-decoration: none;
-    font-size: 0.9rem;
     transition: var(--transition);
+    font-size: 0.9rem;
+    font-weight: 300;
 }
 
 nav a:hover, nav a.active {
     color: var(--gold);
 }
 
-/* 6. COMPOSANTS RÉUTILISABLES (BOUTONS) */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 2px solid var(--gold);
-    color: var(--gold);
-    text-decoration: none;
-    transition: var(--transition);
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.btn:hover {
-    background: var(--gold);
-    color: var(--deep-black);
-}
-
-/* 7. SECTION ACCUEIL (HERO) */
+/* 5. HERO & SECTIONS D'INTRODUCTION */
 .hero {
     height: 100vh;
     background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0') no-repeat center/cover;
@@ -119,7 +87,6 @@ nav a:hover, nav a.active {
     justify-content: center;
     text-align: center;
     position: relative;
-    color: var(--white);
 }
 
 .hero::after {
@@ -136,97 +103,101 @@ nav a:hover, nav a.active {
 
 .hero h1 { font-size: 4rem; color: var(--gold); }
 
-/* 8. SECTION À PROPOS (HISTOIRE) */
-.history-section {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    padding: 100px 0;
+.intro {
+    padding: 120px 20px 60px; /* Padding haut plus grand pour compenser le header fixe */
+    text-align: center;
 }
 
-.history-text p {
+.intro h2 {
+    color: var(--gold);
+    font-size: 40px;
     margin-bottom: 20px;
-    font-size: 1.1rem;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: 0 auto;
     color: var(--text-muted);
 }
 
-/* 9. GRILLE DE CARTES (BRIGADE & SPÉCIALITÉS) */
-.brigade-section {
-    background: var(--gray-bg);
+/* 6. SYSTÈME DE GRILLE (SERVICES & SPÉCIALITÉS) */
+.specialites {
+    background: #111;
     padding: 80px 0;
 }
 
-.grid, .brigade-grid {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-.card, .chef-card {
-    background: var(--white);
+/* 7. CARTES (STYLE SERVICES & ACCUEIL) */
+.card {
+    background: var(--gray-card);
+    padding: 40px 30px;
     text-align: center;
+    border: 1px solid #333;
     transition: var(--transition);
-    border: 1px solid #eee;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.chef-card:hover, .card:hover {
-    transform: translateY(-10px);
-    border-color: var(--gold);
-}
-
-.chef-photo {
-    width: 100%;
-    height: 350px;
-    background: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-}
-
-.chef-info { padding: 25px; }
-.chef-info h3 { color: var(--black); font-size: 1.2rem; }
-.chef-info p { color: var(--gold); font-style: italic; }
-
-/* 10. SECTION STATISTIQUES (NOIR & OR) */
-.stats-section {
-    padding: 80px 0;
-    background: var(--deep-black);
+    text-decoration: none;
     color: var(--white);
+    display: block;
 }
 
-.stats-grid {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    flex-wrap: wrap;
+.card:hover {
+    transform: translateY(-12px);
+    border-color: var(--gold);
+    background: #252525;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
-.stat-box h2 {
-    font-size: 3.5rem;
+.card h3 {
     color: var(--gold);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
 }
 
-.stat-box p {
+.card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* 8. BOUTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+    margin-top: 20px;
 }
 
-/* 11. FOOTER */
+.btn:hover {
+    background: var(--gold);
+    color: var(--deep-black);
+}
+
+/* 9. FOOTER */
 footer {
     background: var(--deep-black);
-    color: #777;
     text-align: center;
-    padding: 60px 0;
+    padding: 50px 20px;
     border-top: 1px solid #333;
+    margin-top: 0;
 }
 
-/* 12. RESPONSIVE */
+footer p {
+    color: #555;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* 10. RESPONSIVE */
 @media(max-width: 768px) {
-    .nav-container { flex-direction: column; gap: 15px; }
-    .history-section { flex-direction: column; text-align: center; }
     .hero h1 { font-size: 2.5rem; }
-    .stat-box { margin: 20px; width: 100%; }
+    .intro h2 { font-size: 30px; }
+    .grid { grid-template-columns: 1fr; }
 }
