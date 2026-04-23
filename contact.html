@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact du restaurant</title>
+    <link rel="stylesheet" href="style.css">
+
+        <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fdfaf6; /* Un blanc cassé plus chaleureux pour un restaurant */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* couleur de fond du pqge de navigation */
+        .lien {
+            background-color: black;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: goldenrod; 
+            text-decoration: none;
+            font-weight: bold;
+            transition: red;
+        }
+
+        nav ul li a:hover {
+            color:white;
+        }
+
+        /* Conleur des liens */
+        .info {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h4 {
+            color: goldenrod;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            border-left: 4px solid goldenrod;
+            padding-left: 10px;
+        }
+
+        /* Formulaire de la page */
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dfe6e9;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: goldenrod;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-bottom: 30px;
+        }
+
+        button:hover {
+            background-color: #b32d2d;
+        }
+
+        /* style du GPS*/
+        iframe {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid #dfe6e9 !important;
+            margin-top: 10px;
+        }
+    </style>
+   
+    
+</head>
+
+<body>
+    <header class="lien">
+        <nav>
+            <ul>
+                <li><a href="index.html">Acueille</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="service.html">Service</a></li>
+                 <li><a href="contact.html">Contact-nous</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <div class="info">
+        <form action="">
+            <h4>Veuillez renseigner les information</h4>
+
+            <div>
+            <label for="">Nom </label>
+            <input type="text"  id="Nom"  placeholder="Entrez votre nom" required>
+            </div>
+
+            <div>
+            <label for="">Prenom</label>
+            <input type="text" id="Prenom"  placeholder="Entrez votre prenom" required>
+            </div>
+
+            <div>
+            <label for="">Email</label>
+            <input type="email " id="Email" >
+            </div>
+            <div>
+                <label for="">Message</label>
+                <textarea name="Message" id="" required></textarea>
+            </div>
+          
+
+            <button type="submit">Envoyez</button>
+
+             <div>
+            <h4>Notre localisation</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.908921462268!2d-17.4404730251261!3d14.661109885832452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec19f50b0b07c3f%3A0xa5bd9ae56ff2025c!2sUniversit%C3%A9%20Rose%20Dieng%20France-S%C3%A9n%C3%A9gal%20(Ex%20Campus%20Franco-S%C3%A9n%C3%A9galais)!5e0!3m2!1sfr!2ssn!4v1776946687934!5m2!1sfr!2ssn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        </form>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
