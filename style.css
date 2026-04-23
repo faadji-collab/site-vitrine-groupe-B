@@ -76,3 +76,35 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(150px, 250px)); /* Limite la largeur à 250px */
     justify-content: center; /* Centre les boutons sur la page */
 }
+
+header {
+            background: var(--black);
+            color: var(--white);
+            padding: 25px 0;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--white);
+            margin-left: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--gold);
+        }
