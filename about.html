@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos | La Table d'Or</title>
+    <!-- Lien vers le fichier CSS commun du Membre 1 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour l'élégance de La Table d'Or */
+        :root {
+            --gold: #d4af37;
+            --dark-gold: #b8860b;
+            --black: #1a1a1a;
+            --white: #ffffff;
+            --gray-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif, Georgia, 'Times New Roman', Times, serif;
+            color: var(--black);
+            margin: 0;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        /* --- Typographie Chic --- */
+        h1, h2, h3 {
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            display: block;
+            font-size: 0.5em;
+            color: var(--gold);
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* --- Header Gastronomique --- */
+        header {
+            background: var(--black);
+            color: var(--white);
+            padding: 25px 0;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--white);
+            margin-left: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--gold);
+        }
+
+        /* --- Histoire & Philosophie --- */
+        .history-section {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .history-text {
+            flex: 1;
+        }
+
+        .history-text p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* --- Cartes Équipe (Brigade) --- */
+        .brigade-section {
+            background: var(--gray-light);
+            padding: 80px 0;
+        }
+
+        .brigade-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .chef-card {
+            background: var(--white);
+            padding: 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.4s;
+            border: 1px solid #eee;
+        }
+
+        .chef-card:hover {
+            transform: translateY(-15px);
+        }
+
+        .chef-photo {
+            width: 100%;
+            height: 350px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .chef-info {
+            padding: 25px;
+        }
+
+        .chef-info h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--black);
+        }
+
+        .chef-info p {
+            color: var(--gold);
+            font-style: italic;
+            margin: 10px 0 0;
+        }
+
+        /* --- Chiffres d'Excellence --- */
+        .stats-section {
+            padding: 80px 0;
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .stat-box h2 {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin: 0;
+        }
+
+        .stat-box p {
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #777;
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">LA TABLE <span>D'OR</span></a>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="about.html" class="active">À propos</a>
+                <a href="Services.html">Services</a>
+                <a href="contact.html">Contactez-nous</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section Histoire -->
+        <section class="container history-section">
+            <div class="history-text">
+                <h1 class="section-title"><span>L'Héritage</span>Notre Histoire</h1>
+                <p>Depuis son ouverture, <strong>La Table d'Or</strong> s'est imposée comme une destination incontournable pour les amateurs de haute gastronomie. Notre établissement est né de la volonté de marier les traditions culinaires françaises aux techniques les plus modernes.</p>
+                <p>Chaque produit est sélectionné avec une rigueur absolue auprès de producteurs locaux passionnés, pour offrir à nos convives une expérience sensorielle inoubliable, où l'or de la terre se retrouve dans chaque assiette.</p>
+            </div>
+        </section>
+
+        <!-- Section Brigade -->
+        <section class="brigade-section">
+            <div class="container">
+                <h2 class="section-title"><span>Excellence</span>La Brigade</h2>
+                <div class="brigade-grid">
+                    <div class="chef-card">
+                        <div class="chef-photo">Portrait du Chef de Cuisine</div>
+                        <div class="chef-info">
+                            <h3>Fatouma Adji</h3>
+                            <p>Chef Exécutif & Fondateur</p>
+                        </div>
+                    </div>
+                    <div class="chef-card">
+                        <div class="chef-photo">Portrait de la Chef Pâtissière</div>
+                        <div class="chef-info">
+                            <h3>Rokhaya Mbengue</h3>
+                            <p>Chef de cuisine</p>
+                        </div>
+                    </div>
+                    <div class="chef-card">
+                        <div class="chef-photo">Portrait du Sommelier</div>
+                        <div class="chef-info">
+                            <h3>Khadim Guéye</h3>
+                            <p>Sous chef de cuisine </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Chiffres -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h2>3</h2>
+                        <p>Étoiles Espérées</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>12</h2>
+                        <p>Tables Privées</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>450</h2>
+                        <p>Grands Crus</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>LA TABLE D'OR — HAUTE GASTRONOMIE</p>
+        </div>
+    </footer>
+
+</body>
+</html>
