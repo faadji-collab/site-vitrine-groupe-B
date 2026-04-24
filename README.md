@@ -14,7 +14,7 @@
 Ouvrir `index.html` dans un navigateur
 
 ## Aperçu 
-![Acceuil](assets/screenshots/Capture d’écran-Acceuil.png)
+![Acceuil](assets/screenshots/Acceuil.png)
 ![À Propos](assets/screenshots/apropos.png)
 
 ## Fonctionalité
